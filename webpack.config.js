@@ -7,8 +7,8 @@ const webpack = require('webpack');
 const TersetJSPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: {
-    app: path.resolve(__dirname,'src','index.js'),
-} ,
+    app: path.resolve(__dirname, 'src', 'index.js'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].[fullhash].js',
@@ -44,37 +44,27 @@ module.exports = {
       },
     ],
   },
-optimization:{
-  minimizer: [
-      new TersetJSPlugin(),
-  ]
-},
-  plugins:[
+  optimization: {
+    minimizer: [new TersetJSPlugin()],
+  },
+  plugins: [
     new MiniCssExtractPlugin({
-        filename: 'css/[name].[fullhash].css',
-        chunkFilename:'css/[id].[fullhash].css'
+      filename: 'css/[name].[fullhash].css',
+      chunkFilename: 'css/[id].[fullhash].css',
     }),
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, 'public/index.html')
+      template: path.resolve(__dirname, 'public/index.html'),
     }),
     new webpack.DllReferencePlugin({
-        manifest: require('./modules.manifest.json')
+      manifest: require('./modules.manifest.json'),
     }),
     new AddAssetHtmlPlugin({
       filepath: path.resolve(__dirname, 'dist/js/*.dll.js'),
       outputPath: 'js',
-      publicPath: 'http://localhost:9000/js/'
+      publicPath: './js/',
     }),
     new CleanWebpackPlugin({
-        cleanOnceBeforeBuildPatterns: ['**/app.*'],
-    })
+      cleanOnceBeforeBuildPatterns: ['**/app.*'],
+    }),
   ],
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    historyApiFallback: true,
-    open: true,
-    port: 9000,
-    hot: true,
-  },
 };
