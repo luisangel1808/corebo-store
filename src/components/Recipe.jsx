@@ -1,16 +1,16 @@
 import React from 'react';
-import './styles/components/Product.css';
+import './styles/components/Recipe.css';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
-import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Product = ({ product }) => {
+const Recipe = ({ recipe }) => {
+  
   return (
-    <div className="Product-item">
-        <div className="Product-item-valoration">
+    <div className="Recipe-item">
+        <div className="Recipe-item-valoration">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
@@ -19,35 +19,41 @@ const Product = ({ product }) => {
             <FontAwesomeIcon icon={faComment} />
             20
         </div>
-        <img src={product.image[0]} alt={product.title} />
-        <h3>{product.title}</h3>
+        <img src={recipe.image[0]} alt={recipe.title} />
+        <h3>{recipe.title}</h3>
         <FontAwesomeIcon icon={faHeart} />
-        <div className="Product-item-value">
+        <div className="Recipe-item-value">
           <h2>
-            ${''}
-            {product.price}
+            {`${recipe.time} min`}
           </h2>
 
-          <div className="Product-item-value-quantity">
-            <FontAwesomeIcon icon={faPlusCircle} />
-            1
-            <FontAwesomeIcon icon={faMinusCircle} />
+          <div className="Recipe-item-value-quantity">
+            <FontAwesomeIcon icon={faUser} />
+            <h3>{recipe.portions}</h3>
           </div>
         </div>
-        <h2>Description</h2>
-        <p>{product.description}</p>
-        <h2>Recipes</h2>
-        <div className="Product-item-recipes">
+        <h2>Ingredients</h2>
+        <div className="Recipe-item-ingredients">
             <ul>
-                {product.recipes.map((recipe)=>{
-                    return <li>{recipe}</li>
+                {recipe.ingredients.map((ingredient)=>{
+                    return(
+                        <li>
+                          {ingredient}
+                        </li>
+                    ) 
                 })}
             </ul>
         </div>
+        <h2>Preparation</h2>
+        <div className="Recipe-item-preparation">
+                <p>{recipe.preparation}</p>
+        </div>
+        
+
         <h2>Comments</h2>
-        <div className="Product-item-comments">
+        <div className="Recipe-item-comments">
             <ul>
-                {product.comments.map((comment)=>{
+                {recipe.comments.map((comment)=>{
                     return(
                         <li>
                             <p>{comment.text}</p>
@@ -59,8 +65,7 @@ const Product = ({ product }) => {
             </ul>
         </div>
 
-      <button type="button">Add to Cart</button>
     </div>
   );
 };
-export default Product;
+export default Recipe;

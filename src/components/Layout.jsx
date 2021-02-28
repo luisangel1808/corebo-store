@@ -5,10 +5,10 @@ const Layout = ({ children }) => {
   return (
     <div className="Main">
       <Header />
-        {children}
+      {children}
       <Footer />
     </div>
   );
-}
+};
 
 export default Layout;
