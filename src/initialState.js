@@ -132,7 +132,15 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
+      ingredients:[{
+        'quantity':2,
+        'id':0,
+      },
+      {
+        'quantity':3,
+        'id':null,
+        'name':'Eggs'
+      }],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -154,7 +162,15 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
+      ingredients:[{
+        'quantity':2,
+        'id':0,
+      },
+      {
+        'quantity':3,
+        'id':null,
+        'name':'Eggs'
+      }],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -176,7 +192,15 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
+      ingredients:[{
+        'quantity':2,
+        'id':0,
+      },
+      {
+        'quantity':3,
+        'id':null,
+        'name':'Eggs'
+      }],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -198,7 +222,15 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
+      ingredients:[{
+        'quantity':2,
+        'id':0,
+      },
+      {
+        'quantity':3,
+        'id':null,
+        'name':'Eggs'
+      }],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -220,8 +252,15 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
-      preparation:
+      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],      ingredients:[{
+        'quantity':2,
+        'id':0,
+      },
+      {
+        'quantity':3,
+        'id':null,
+        'name':'Eggs'
+      }],      preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
         {
