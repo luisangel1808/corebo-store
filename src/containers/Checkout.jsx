@@ -21,15 +21,11 @@ const Checkout = () => {
   return (
     <div className="Checkout">
       <div className="Checkout-content">
-        {cart.length > 0 ? (
-          <h3>Your products: </h3>
-        ) : (
-          <h3>Sin pedidos...</h3>
-        )}
+        {cart.length > 0 ? <h3>Your products: </h3> : <h3>Sin pedidos...</h3>}
         {cart.map((item) => (
           <ul>
             <div className="Checkout-element">
-              <img src={item.image[0]} alt={item.title}/>
+              <img src={item.image[0]} alt={item.title} />
               <h4>{item.title}</h4>
               <span>${item.price}</span>
             </div>
@@ -41,7 +37,10 @@ const Checkout = () => {
       </div>
       {cart.length > 0 && (
         <div className="Checkout-sidebar">
-          <h3> Total: <span>${handleSumTotal()}</span>  </h3>
+          <h3>
+            {' '}
+            Total: <span>${handleSumTotal()}</span>{' '}
+          </h3>
           <Link to="/checkout/Information">
             <button type="button">Continuar pedido</button>
           </Link>

@@ -25,7 +25,7 @@ const App = () => {
             <Route exact path="/checkout/payment" component={Payment} />
             <Route exact path="/checkout/success" component={Success} />
             <Route exact path="/productMain/:id" component={ProductMain} />
-            <Route exact path="/recipeMain" component={RecipeMain} />
+            <Route exact path="/recipeMain/:id" component={RecipeMain} />
             <Route component={NotFound} />
           </Switch>
         </Layout>

@@ -1,9 +1,10 @@
 export default {
   cart: [],
   buyer: [],
+  orders: [],
   products: [
     {
-      id: '1',
+      id: 1,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -27,7 +28,7 @@ export default {
       ],
     },
     {
-      id: '2',
+      id: 2,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -46,7 +47,7 @@ export default {
       ],
     },
     {
-      id: '3',
+      id: 3,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -65,7 +66,7 @@ export default {
       ],
     },
     {
-      id: '4',
+      id: 4,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -84,7 +85,7 @@ export default {
       ],
     },
     {
-      id: '5',
+      id: 5,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -103,7 +104,7 @@ export default {
       ],
     },
     {
-      id: '6',
+      id: 6,
       image: [
         'https://exitocol.vtexassets.com/arquivos/ids/2622683-800-auto?width=800&height=auto&aspect=true',
         'https://arepa.s3.amazonaws.com/mug.png',
@@ -132,15 +133,17 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients:[{
-        'quantity':2,
-        'id':0,
-      },
-      {
-        'quantity':3,
-        'id':null,
-        'name':'Eggs'
-      }],
+      ingredients: [
+        {
+          quantity: 2,
+          id: 1,
+        },
+        {
+          quantity: 3,
+          id: null,
+          name: 'Eggs',
+        },
+      ],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -162,15 +165,17 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients:[{
-        'quantity':2,
-        'id':0,
-      },
-      {
-        'quantity':3,
-        'id':null,
-        'name':'Eggs'
-      }],
+      ingredients: [
+        {
+          quantity: 2,
+          id: 1,
+        },
+        {
+          quantity: 3,
+          id: null,
+          name: 'Eggs',
+        },
+      ],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -192,15 +197,17 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients:[{
-        'quantity':2,
-        'id':0,
-      },
-      {
-        'quantity':3,
-        'id':null,
-        'name':'Eggs'
-      }],
+      ingredients: [
+        {
+          quantity: 2,
+          id: 1,
+        },
+        {
+          quantity: 3,
+          id: null,
+          name: 'Eggs',
+        },
+      ],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -222,15 +229,17 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients:[{
-        'quantity':2,
-        'id':0,
-      },
-      {
-        'quantity':3,
-        'id':null,
-        'name':'Eggs'
-      }],
+      ingredients: [
+        {
+          quantity: 2,
+          id: 1,
+        },
+        {
+          quantity: 3,
+          id: null,
+          name: 'Eggs',
+        },
+      ],
       preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
@@ -252,15 +261,19 @@ export default {
       title: 'Irish stew',
       time: 90,
       portions: 4,
-      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],      ingredients:[{
-        'quantity':2,
-        'id':0,
-      },
-      {
-        'quantity':3,
-        'id':null,
-        'name':'Eggs'
-      }],      preparation:
+      ingredients: ['2 Eggs', 'Salt', '2 piece of mangoes', 'Pepper'],
+      ingredients: [
+        {
+          quantity: 2,
+          id: 1,
+        },
+        {
+          quantity: 3,
+          id: null,
+          name: 'Eggs',
+        },
+      ],
+      preparation:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin aliquet lorem risus, hendrerit maximus ante viverra vitae. Pellentesque eget elit leo. Sed interdum, dui ut venenatis scelerisque, nisl dui condimentum augue, quis vehicula est felis a dolor. Sed blandit facilisis faucibus. Pellentesque a lobortis ligula. Donec mi magna, suscipit sit amet venenatis eu, sagittis ac velit.',
       comments: [
         {
