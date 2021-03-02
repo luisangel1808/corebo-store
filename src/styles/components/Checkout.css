@@ -1,0 +1,13 @@
+
+.Checkout-element{
+    display: flex;
+    justify-content: space-between;
+}
+.Checkout-element img{
+    width: 60px;
+    height: 60px;
+}
+.Checkout-sidebar h3{
+    display: flex;
+    justify-content: space-between;
+}
