@@ -10,22 +10,27 @@ import NotFound from '../containers/NotFound';
 import Layout from '../components/Layout';
 import ProductMain from '../containers/ProductMain';
 import RecipeMain from '../containers/RecipeMain';
+import AppContext from '../context/AppContext';
+import useInitialSate from '../hooks/useInitialState';
 const App = () => {
+  const initialState = useInitialSate();
   return (
-    <BrowserRouter>
-      <Layout>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/checkout" component={Checkout} />
-          <Route exact path="/checkout/information" component={Information} />
-          <Route exact path="/checkout/payment" component={Payment} />
-          <Route exact path="/checkout/success" component={Success} />
-          <Route exact path="/productMain" component={ProductMain} />
-          <Route exact path="/recipeMain" component={RecipeMain} />
-          <Route component={NotFound} />
-        </Switch>
-      </Layout>
-    </BrowserRouter>
+    <AppContext.Provider value={initialState}>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/checkout/information" component={Information} />
+            <Route exact path="/checkout/payment" component={Payment} />
+            <Route exact path="/checkout/success" component={Success} />
+            <Route exact path="/productMain/:id" component={ProductMain} />
+            <Route exact path="/recipeMain" component={RecipeMain} />
+            <Route component={NotFound} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 

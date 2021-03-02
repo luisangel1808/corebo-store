@@ -1,11 +1,27 @@
-import React from 'react';
-import Product from './Product';
-const Products = ({ products }) => {
+import React, { useContext } from 'react';
+import ProductGeneral from './ProductGeneral';
+import AppContext from '../context/AppContext';
+const Products = () => {
+  const {
+    state: { products },
+    addToCart,
+  } = useContext(AppContext);
+  const {
+    state: { cart },
+  } = useContext(AppContext);
+
+  const handleAddToCart = (product) => () => {
+    addToCart(product);
+  };
   return (
     <div className="Products">
       <div className="Products-items">
         {products.map((product) => (
-          <Product key={product.id} product={product} />
+          <ProductGeneral
+            key={product.id}
+            product={product}
+            handleAddToCart={handleAddToCart}
+          />
         ))}
       </div>
     </div>
